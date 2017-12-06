@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--Name: James Strater Smith
+Class: James Strater Smith
+Created: 7/11/16
+Description: Awards page-->
+<html lang="en">
+<head>
+    <meta name="keywords" content="Example, template" />
+    <meta name="description" content="This is a template" />
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="James Strater-Smith"/>
+    <meta charset="UTF-8">
+    <title>Awards</title>
+    <link href="{% static "styles/webdefault.css" %}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header>
+    {%  include "nav.html" %}
+</header>
+<main>
+    <h1>
+        Best Chappelle's Show Skits
+    </h1>
+    <form method="POST">
+    {% csrf_token %}
+    <table class="myTable">
+        <tr>
+            <th>Skit Name</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Current Votes</th>
+            <th>Vote</th>
+        </tr>
+        {%  for vote in votes %}
+        <tr>
+            <td>{{ vote.skitname }}</td>
+            <td>{{ vote.nomineedescription }}</td>
+            <td>
+                <figure>
+                    <img src="{% static vote.nomineepic %}" alt="{{ vote.skitname }} image" width="304" height="228">
+                </figure>
+            </td>
+            <td>{{ vote.votecount }}</td>
+            <td>
+                {% if forloop.first %}
+                <input class="autofill" type="radio" checked="checked" name="skit" {{ checked }} value="{{ vote.skitname }}">
+                {% else %}
+                <input class="autofill" type="radio" name="skit" {{ checked }} value="{{ vote.skitname }}">
+                {%  endif %}
+            </td>
+        </tr>
+        {%  endfor %}
+    </table>
+    <input type="submit" class="mybutton" name="vote" value="Vote">
+</form>
+</main>
+<footer>
+    <address><small> 2600 9th Street, Boulder, CO, 80304 <br/>
+        (303)-513-0214 <br/>
+        jmsaviv@gmail.com </small></address>
+</footer>
+</body>
+</html>
+

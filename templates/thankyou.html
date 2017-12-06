@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--Name: James Strater Smith
+Class: James Strater Smith
+Created: 7/11/16
+Description: Thanks page-->
+<html lang="en">
+<head>
+    <meta name="keywords" content="thanks, thank you" />
+    <meta name="description" content="This is a thank you page" />
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="James Strater-Smith"/>
+    <meta charset="UTF-8">
+    <title>Thank You</title>
+    <link href="{% static "styles/webdefault.css" %}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header>
+    {%  include "nav.html" %}
+</header>
+<main>
+    <h1>Thank you for registering!</h1>
+    <table class="myTable">
+        <tr>
+            <th>Registration Information</th>
+        </tr>
+            {% for value in new_registrant.values %}
+                <tr>
+                    <td>
+                        {{ value }}
+                    </td>
+                </tr>
+            {% endfor %}
+    </table>
+</main>
+<footer>
+    <address><small> 2600 9th Street, Boulder, CO, 80304 <br/>
+        (303)-513-0214 <br/>
+        jmsaviv@gmail.com </small></address>
+</footer>
+</body>
+</html>
+

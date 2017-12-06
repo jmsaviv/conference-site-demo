@@ -1,0 +1,94 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--Name: James Strater Smith
+Class: James Strater Smith
+Created: 7/11/16
+Description: Menu page-->
+<html lang="en">
+<head>
+    <meta name="keywords" content="meals, menu" />
+    <meta name="description" content="This is a menu description" />
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="James Strater-Smith"/>
+    <meta charset="UTF-8">
+    <title>Meal Menu</title>
+    <link href="{%  static "styles/webdefault.css" %}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header>
+    {%  include "nav.html" %}
+</header>
+<main>
+    <div class="horizontalsection">
+        <div class="column">
+            <h1>
+                Saturday's Menu
+            </h1>
+            <figure>
+                <img src="{%  static "images/prince.jpeg" %}" alt="Prince" width="304" height="228">
+            </figure>
+            <div>
+                <h3>
+                    Breakfast
+                </h3>
+                <p>
+                    Pancakes
+                </p>
+                <h3>
+                    Lunch
+                </h3>
+                <p>
+                    Ham Sandwiches
+                </p>
+                <h3>
+                    Dinner
+                </h3>
+                <p>
+                    Steak and Lobster
+                </p>
+            </div>
+        </div>
+        <div class="column">
+            <h1>
+                Sunday's Menu
+            </h1>
+            <figure>
+                <img src="{%  static "images/ribs.jpeg" %}" alt="Ribs" width="304" height="228">
+            </figure>
+            <div>
+                <h3>
+                    Breakfast
+                </h3>
+                <p>
+                    Waffles
+                </p>
+                <h3>
+                    Lunch
+                </h3>
+                <p>
+                    Tuna Salad
+                </p>
+                <h3>
+                    Dinner
+                </h3>
+                <p>
+                    Ribs
+                </p>
+            </div>
+        </div>
+    </div>
+        <p class="centertext">
+            Full Meal Package: $250.00 (includes dinner on Sunday)
+        </p>
+        <p class="centertext">
+            Sunday Dinner: $75.00
+        </p>
+</main>
+<div class="footer">
+    <address><small> 2600 9th Street, Boulder, CO, 80304 <br/>
+        (303)-513-0214 <br/>
+        jmsaviv@gmail.com </small></address>
+</div>
+</body>
+</html>
+

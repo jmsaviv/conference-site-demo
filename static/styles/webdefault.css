@@ -1,0 +1,61 @@
+/* Name: James Strater Smith
+Class: CS336
+Created: 7/11/16
+Description: Workshops page */
+
+.column1, .column2 {
+    float: left;
+    width: 45%;
+    margin: 2.5%;
+    text-align: center;
+}
+
+.horizontalsection {
+    clear:both;
+}
+
+.column {
+    float: left;
+    width: 45%;
+    margin: 2.5%;
+    text-align: center;
+}
+@media screen and (max-width: 480px) {
+    .column {margin: 1% 0 1% 0; width: 100%; }
+}
+.centertext {
+    text-align: center;
+}
+
+.footer {
+    padding: 10px;
+    margin: 10px;
+}
+
+.myTable th {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 100%;
+    border-bottom: 3px solid #111111;
+    border-top: 2px solid #999;
+}
+.myTable tr:nth-child(odd){
+    background-color: azure;
+    text-align: center;
+}
+.myTable tr:nth-child(even){
+    background-color: aquamarine;
+    text-align: center;
+}
+
+.myTable tr:hover {
+    background-color: crimson;
+}
+fieldset:hover {
+    background-color: lightblue;
+    border-color: green;
+}
+.myactivitylist {
+    list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif")
+}
+

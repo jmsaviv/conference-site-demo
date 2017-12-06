@@ -1,0 +1,54 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--Name: James Strater Smith
+Class: James Strater Smith
+Created: 7/11/16
+Description: Index page for conference-->
+<html lang="en">
+<head>
+    <meta name="keywords" content="Index, conference" />
+    <meta name="description" content="This is an index page" />
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="James Strater-Smith"/>
+    <meta charset="UTF-8">
+    <link href="{%  static "styles/webdefault.css" %}" rel="stylesheet" type="text/css"/>
+    <title>Index</title>
+</head>
+<body>
+<header>
+    {%  include "nav.html" %}
+</header>
+<main>
+    <h1>
+        Chappelle's Show Reunion Conference
+    </h1>
+    <p>
+        Chappelle's Show was a massively popular TV show hosted by
+        comedian Dave Chappelle from 2003 to 2006. The show abruptly ended
+        when Dave Chappelle unexpectedly quit in 2006, much to the dismay of
+        his fans. Fortunately for comedy fanatics everywhere, Dave has
+        organized this conference as a sort of reunion for cast members of
+        Chappelle's Show. The conference is open to the public and will feature
+        several of the show's stars including Dave Chappelle himself.
+    </p>
+    <h2>
+        July 22nd and 23rd, 2017
+    </h2>
+    <figure>
+        <img src="{%  static "images/rickjamespic.jpeg" %}" alt="Rick James" width="304" height="228">
+    </figure>
+</main>
+<footer>
+    <address><small> 2600 9th Street, Boulder, CO, 80304 <br/>
+        (303)-513-0214 <br/>
+        jmsaviv@gmail.com </small></address>
+    <address><small><br>
+        While this web site was created to satisfy the requirement of building a web<br>
+        site for an academic course at Regis University, the views and opinions<br>
+        expressed on this web site are solely those of the original author and do<br>
+        not necessarily represent the views and opinions of Regis University.
+    </small></address>
+</footer>
+</body>
+</html>
+

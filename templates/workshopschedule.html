@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--Name: James Strater Smith
+Class: James Strater Smith
+Created: 7/11/16
+Description: Workshops page-->
+<html lang="en">
+<head>
+    <meta name="keywords" content="workshop, schedule" />
+    <meta name="description" content="This is a workshop schedule" />
+    <meta name="robots" content="index, follow"/>
+    <meta name="author" content="James Strater-Smith"/>
+    <meta charset="UTF-8">
+    <title>Workshop Schedule</title>
+    <link href="{% static "styles/webdefault.css" %}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header>
+    {%  include "nav.html" %}
+</header>
+<main>
+    <h1>
+        Workshop Schedule
+    </h1>
+    <table class="myTable">
+        <tr>
+            <th>Workshop Title</th>
+            <th>Room</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Session</th>
+        </tr>
+        {% for workshop in workshops %}
+    <tr>
+        <td>{{ workshop.name }}</td>
+        <td>{{ workshop.roomnumber }}</td>
+        <td>{{ workshop.starttime }}</td>
+        <td>{{ workshop.endtime }}</td>
+        <td>{{ workshop.session }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+<h4>***Session 1 and Session 2 are on Saturday and Session 3 is on Sunday***</h4><br/>
+</main>
+<footer>
+    <address><small> 2600 9th Street, Boulder, CO, 80304 <br/>
+        (303)-513-0214 <br/>
+        jmsaviv@gmail.com </small></address>
+</footer>
+</body>
+</html>
